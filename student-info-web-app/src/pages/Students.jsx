@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import StudentCard from '../components/StudentCard';
+import Loading from '../components/Loading';
 import { fetchStudents } from '../services/api';
 
 const Students = () => {
@@ -22,38 +23,7 @@ const Students = () => {
     getStudents();
   }, []);
 
-  if (loading) return (
-    <div className="container" style={{ 
-      display: 'flex', 
-      flexDirection: 'column',
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      minHeight: '60vh',
-      gap: '20px'
-    }}>
-      <div className="loader" style={{
-        width: '60px',
-        height: '60px',
-        border: '5px solid var(--accent-color)',
-        borderTop: '5px solid var(--primary-color)',
-        borderRadius: '50%',
-        animation: 'spin 1s linear infinite'
-      }}></div>
-      <h2 style={{ color: 'var(--primary-color)', fontWeight: 600, animation: 'pulse 1.5s infinite' }}>
-        Retrieving Student Data...
-      </h2>
-      <style>{`
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.6; }
-        }
-      `}</style>
-    </div>
-  );
+  if (loading) return <Loading message="Retrieving Student Data..." />;
   if (error) return (
     <div className="container" style={{ 
       display: 'flex', 
