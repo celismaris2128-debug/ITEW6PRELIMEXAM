@@ -22,8 +22,58 @@ const Students = () => {
     getStudents();
   }, []);
 
-  if (loading) return <div className="container" style={{ textAlign: 'center', padding: '100px 0' }}><h2>Loading...</h2></div>;
-  if (error) return <div className="container" style={{ textAlign: 'center', padding: '100px 0', color: 'red' }}><h2>Error: {error}</h2></div>;
+  if (loading) return (
+    <div className="container" style={{ 
+      display: 'flex', 
+      flexDirection: 'column',
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      minHeight: '60vh',
+      gap: '20px'
+    }}>
+      <div className="loader" style={{
+        width: '60px',
+        height: '60px',
+        border: '5px solid var(--accent-color)',
+        borderTop: '5px solid var(--primary-color)',
+        borderRadius: '50%',
+        animation: 'spin 1s linear infinite'
+      }}></div>
+      <h2 style={{ color: 'var(--primary-color)', fontWeight: 600, animation: 'pulse 1.5s infinite' }}>
+        Retrieving Student Data...
+      </h2>
+      <style>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.6; }
+        }
+      `}</style>
+    </div>
+  );
+  if (error) return (
+    <div className="container" style={{ 
+      display: 'flex', 
+      flexDirection: 'column',
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      minHeight: '60vh',
+      gap: '20px',
+      textAlign: 'center'
+    }}>
+      <div style={{ color: '#ff6b6b', fontSize: '4rem', marginBottom: '10px' }}>
+        <i className="fas fa-exclamation-circle"></i>
+      </div>
+      <h2 style={{ color: 'var(--text-color)', fontWeight: 700 }}>Oops! Connection Issue</h2>
+      <p style={{ color: 'var(--text-light)', maxWidth: '400px' }}>{error}</p>
+      <button className="btn" onClick={() => window.location.reload()} style={{ marginTop: '20px' }}>
+        <i className="fas fa-redo"></i> Try Again
+      </button>
+    </div>
+  );
 
   return (
     <div className="container">
