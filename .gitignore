@@ -1,0 +1,4 @@
+student-info-web-app/node_modules/
+student-info-web-app/build/
+.DS_Store
+.netlify/
