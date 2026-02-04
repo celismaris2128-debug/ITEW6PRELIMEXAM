@@ -27,7 +27,7 @@
   "devDependencies": {
     "react-scripts": "4.0.3"
   },
-  "homepage": "http://yourusername.github.io/student-info-web-app",
+  "homepage": ".",
   "browserslist": {
     "production": [
       ">0.2%",

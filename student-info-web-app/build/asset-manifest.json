@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/student-info-web-app/static/css/main.fd89cb55.chunk.css",
+    "main.js": "/student-info-web-app/static/js/main.adc1a557.chunk.js",
+    "main.js.map": "/student-info-web-app/static/js/main.adc1a557.chunk.js.map",
+    "runtime-main.js": "/student-info-web-app/static/js/runtime-main.138e8dee.js",
+    "runtime-main.js.map": "/student-info-web-app/static/js/runtime-main.138e8dee.js.map",
+    "static/js/2.ee705c5f.chunk.js": "/student-info-web-app/static/js/2.ee705c5f.chunk.js",
+    "static/js/2.ee705c5f.chunk.js.map": "/student-info-web-app/static/js/2.ee705c5f.chunk.js.map",
+    "index.html": "/student-info-web-app/index.html",
+    "static/css/main.fd89cb55.chunk.css.map": "/student-info-web-app/static/css/main.fd89cb55.chunk.css.map",
+    "static/js/2.ee705c5f.chunk.js.LICENSE.txt": "/student-info-web-app/static/js/2.ee705c5f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.138e8dee.js",
+    "static/js/2.ee705c5f.chunk.js",
+    "static/css/main.fd89cb55.chunk.css",
+    "static/js/main.adc1a557.chunk.js"
+  ]
+}
